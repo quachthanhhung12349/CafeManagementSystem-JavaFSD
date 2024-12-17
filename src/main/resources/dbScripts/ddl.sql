@@ -2,16 +2,14 @@ CREATE DATABASE IF NOT EXISTS myusers;
 USE myusers;
 
 DROP TABLE IF EXISTS `myusers`.`user`;
-CREATE TABLE `myusers`.`user`
-(
-  `username`  VARCHAR(45) NOT NULL,
-  `password`  VARCHAR(45) NULL,
-  `firstname` VARCHAR(45) NOT NULL,
-  `lastname`  VARCHAR(45) NULL,
-  `email`     VARCHAR(45) NULL,
-  `address`   VARCHAR(45) NULL,
-  `phone`     INT         NULL,
-  PRIMARY KEY (`username`)type=MyISAM
+CREATE TABLE `myusers`.`user` (
+                                  `username`  VARCHAR(45) NOT NULL PRIMARY KEY,
+                                  `password`  VARCHAR(45) NULL,
+                                  `firstname` VARCHAR(45) NOT NULL,
+                                  `lastname`  VARCHAR(45) NULL,
+                                  `email`     VARCHAR(45) NULL,
+                                  `address`   VARCHAR(45) NULL,
+                                  `phone`     INT         NULL
 );
 
 CREATE TABLE `myusers`.`food` (
